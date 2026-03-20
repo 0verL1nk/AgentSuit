@@ -49,4 +49,12 @@ describe("quality gate configuration", () => {
     expect(workflow).toContain("bun run test");
     expect(workflow).toContain("bun run build");
   });
+
+  test("repository normalizes text files to LF for cross-platform formatting", () => {
+    const gitattributes = readRepoFile(".gitattributes");
+
+    expect(gitattributes).toContain("* text=auto eol=lf");
+    expect(gitattributes).toContain("*.sh text eol=lf");
+    expect(gitattributes).toContain("*.yml text eol=lf");
+  });
 });

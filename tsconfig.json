@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/cli" },
+    { "path": "./packages/core" },
+    { "path": "./packages/schema" },
+    { "path": "./packages/adapter-openclaw" },
+    { "path": "./packages/adapter-claude-code" },
+    { "path": "./packages/adapter-codex" },
+    { "path": "./packages/registry" }
+  ]
+}

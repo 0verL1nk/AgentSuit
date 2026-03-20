@@ -1,0 +1,28 @@
+node_modules/
+dist/
+coverage/
+.DS_Store
+
+# Bun / TypeScript caches
+*.tsbuildinfo
+.tscache/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editors / IDEs
+.idea/
+.vscode/
+
+# Temp files
+tmp/
+temp/
+*.tmp

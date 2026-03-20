@@ -1,0 +1,14 @@
+{
+  "name": "@agentsuit/cli",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "suit": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun --format esm",
+    "lint": "bunx @biomejs/biome check package.json tsconfig.json src",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "bun test --pass-with-no-tests"
+  }
+}

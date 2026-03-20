@@ -1,0 +1,22 @@
+apiVersion: suit.agent/v1
+kind: Suit
+
+metadata:
+  name: minimal-starter
+  version: 0.1.0
+  title: Minimal Starter Suit
+  description: Minimal fixture used to verify the AgentSuit project scaffold
+
+base:
+  compatibility:
+    runtimes:
+      - openclaw
+      - claude-code
+      - codex
+  target:
+    domain: software-engineering
+    mode: coding-agent
+
+prompt:
+  overlays:
+    - file: assets/prompts/system.md

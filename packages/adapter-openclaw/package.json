@@ -2,6 +2,9 @@
   "name": "@agentsuit/adapter-openclaw",
   "private": true,
   "type": "module",
+  "dependencies": {
+    "@agentsuit/adapter-api": "workspace:*"
+  },
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target bun --format esm",
     "lint": "bunx @biomejs/biome check package.json tsconfig.json src",

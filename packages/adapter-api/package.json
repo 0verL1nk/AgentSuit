@@ -1,9 +1,11 @@
 {
-  "name": "@agentsuit/adapter-codex",
+  "name": "@agentsuit/adapter-api",
   "private": true,
   "type": "module",
+  "exports": "./src/index.ts",
   "dependencies": {
-    "@agentsuit/adapter-api": "workspace:*"
+    "@agentsuit/core": "workspace:*",
+    "@agentsuit/runtime": "workspace:*"
   },
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target bun --format esm",

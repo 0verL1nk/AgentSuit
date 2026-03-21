@@ -26,3 +26,6 @@ yarn-error.log*
 tmp/
 temp/
 *.tmp
+
+# Local brainstorming / companion artifacts
+.superpowers/

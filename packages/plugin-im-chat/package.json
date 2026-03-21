@@ -1,0 +1,19 @@
+{
+  "name": "@agentsuit/plugin-im-chat",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@agentsuit/plugin-api": "workspace:*",
+    "@agentsuit/runtime": "workspace:*",
+    "@chat-adapter/discord": "^4.20.2",
+    "@chat-adapter/state-memory": "^4.20.2",
+    "chat": "^4.20.2"
+  },
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun --format esm",
+    "lint": "bunx @biomejs/biome check package.json tsconfig.json src",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "bun test --pass-with-no-tests"
+  }
+}

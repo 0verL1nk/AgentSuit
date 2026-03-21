@@ -7,6 +7,9 @@
     { "path": "./packages/adapter-openclaw" },
     { "path": "./packages/adapter-claude-code" },
     { "path": "./packages/adapter-codex" },
+    { "path": "./packages/plugin-api" },
+    { "path": "./packages/plugin-im-chat" },
+    { "path": "./packages/runtime" },
     { "path": "./packages/registry" }
   ]
 }

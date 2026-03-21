@@ -1,20 +1,23 @@
 schema: spec-driven
 
-# Project context (optional)
-# This is shown to AI when creating artifacts.
-# Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
+context: |
+  AgentSuit is a Bun-managed TypeScript monorepo for the `suit` CLI and supporting packages.
+  Primary stack: Bun, TypeScript, Node.js standard library, workspace packages under `packages/*`.
+  Contributors use `bun run check` as the local quality gate for lint, typecheck, test, and build.
+  CLI-facing changes must follow `openspec/specs/project-development-standards/spec.md`.
+  Prefer Bun, Node standard library, and existing workspace packages before introducing new third-party dependencies.
+  CLI behavior should be self-explanatory, script-friendly, deterministic in exit semantics, cross-platform in path handling, and covered by automated verification.
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+rules:
+  proposal:
+    - Keep proposals scoped to one capability or one cohesive developer-facing improvement.
+    - For CLI-facing changes, describe the contributor-visible behavior, scriptability implications, failure semantics, and verification plan.
+    - Call out any new runtime dependency and justify why existing Bun, Node, or workspace capabilities are insufficient.
+  tasks:
+    - Include explicit verification tasks for lint, typecheck, tests, and build when CLI behavior is changed.
+    - Include at least one task covering failure-path behavior, not only the happy path.
+    - If filesystem or archive handling changes, include a task to verify cross-platform-safe path handling and untrusted input validation.
+  spec:
+    - Write requirements as contributor-visible behavior, not implementation notes.
+    - For CLI requirements, cover help/usage expectations, stdout vs stderr behavior when relevant, and deterministic non-zero failure behavior.
+    - Prefer adding or modifying scenarios that are testable from the command line.

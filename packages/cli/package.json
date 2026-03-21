@@ -2,8 +2,12 @@
   "name": "@agentsuit/cli",
   "private": true,
   "type": "module",
+  "exports": "./src/index.ts",
   "bin": {
     "suit": "./src/index.ts"
+  },
+  "dependencies": {
+    "@agentsuit/core": "workspace:*"
   },
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target bun --format esm",

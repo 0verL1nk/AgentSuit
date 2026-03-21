@@ -28,8 +28,24 @@ To inspect the scaffolded CLI:
 
 ```bash
 ./node_modules/.bin/suit --help
-./node_modules/.bin/suit init
+./node_modules/.bin/suit new demo-suit
+./node_modules/.bin/suit validate examples/suits/minimal-starter
+./node_modules/.bin/suit inspect examples/suits/minimal-starter
+./node_modules/.bin/suit pack examples/suits/minimal-starter
 ```
+
+## Local Suit Workflow
+
+The first executable local workflow currently supports:
+
+```bash
+./node_modules/.bin/suit new demo-suit
+./node_modules/.bin/suit validate ./demo-suit
+./node_modules/.bin/suit inspect ./demo-suit
+./node_modules/.bin/suit pack ./demo-suit
+```
+
+`validate` currently prints a deterministic terminal summary and returns a non-zero exit status for validation failures. It does not write `validate-report.json` to disk yet.
 
 ## Package Layout
 
@@ -54,4 +70,7 @@ packages/
 
 ## Example Fixture
 
-A minimal suit fixture lives under `examples/suits/minimal-starter` and can be used as a local verification target while the CLI is still scaffold-only.
+Fixtures under `examples/suits/` can be used as local verification targets:
+
+- `minimal-starter`: valid minimal suit for `validate`, `inspect`, and `pack`
+- `missing-overlay`: invalid suit with a missing referenced prompt file for failure-path validation tests

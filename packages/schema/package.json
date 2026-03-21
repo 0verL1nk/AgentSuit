@@ -2,6 +2,7 @@
   "name": "@agentsuit/schema",
   "private": true,
   "type": "module",
+  "exports": "./src/index.ts",
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target bun --format esm",
     "lint": "bunx @biomejs/biome check package.json tsconfig.json src",

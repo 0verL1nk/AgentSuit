@@ -27,9 +27,15 @@
       "bin": {
         "suit": "./src/index.ts",
       },
+      "dependencies": {
+        "@agentsuit/core": "workspace:*",
+      },
     },
     "packages/core": {
       "name": "@agentsuit/core",
+      "dependencies": {
+        "@agentsuit/schema": "workspace:*",
+      },
     },
     "packages/registry": {
       "name": "@agentsuit/registry",

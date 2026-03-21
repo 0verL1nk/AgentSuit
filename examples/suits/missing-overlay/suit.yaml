@@ -1,0 +1,18 @@
+apiVersion: suit.agent/v1
+kind: Suit
+
+metadata:
+  name: missing-overlay
+  version: 0.1.0
+  title: Missing Overlay Suit
+  description: Invalid fixture with a missing prompt overlay reference
+
+base:
+  compatibility:
+    runtimes:
+      - openclaw
+      - claude-code
+
+prompt:
+  overlays:
+    - file: assets/prompts/system.md

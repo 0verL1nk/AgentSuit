@@ -7,7 +7,11 @@
     "suit": "./src/index.ts"
   },
   "dependencies": {
-    "@agentsuit/core": "workspace:*"
+    "@agentsuit/adapter-claude-code": "workspace:*",
+    "@agentsuit/core": "workspace:*",
+    "@agentsuit/plugin-api": "workspace:*",
+    "@agentsuit/plugin-im-chat": "workspace:*",
+    "@agentsuit/runtime": "workspace:*"
   },
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target bun --format esm",

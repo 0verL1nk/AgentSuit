@@ -8,6 +8,8 @@
   "workspaces": ["packages/*"],
   "scripts": {
     "build": "bun run --workspaces build",
+    "docker:build:runtime": "docker build -f Dockerfile.runtime -t agentsuit/runtime:latest .",
+    "docker:smoke:runtime": "bash scripts/docker-runtime-smoke.sh",
     "lint": "bunx @biomejs/biome check . && bun run --if-present --workspaces lint",
     "typecheck": "bun run --workspaces typecheck",
     "test": "bun test && bun run --workspaces test --if-present",
